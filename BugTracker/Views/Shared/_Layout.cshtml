@@ -38,7 +38,8 @@
 
     <!-- Head Libs -->
     <script src="~/Scripts/modernizr.js"></script>
-
+    
+    <link href="~/Content/jquery.dataTables.css" rel="stylesheet" />
 </head>
 <body>
     <section class="body">
@@ -289,7 +290,7 @@
                                     </a>
                                 </li>
                                 @*@if (User.IsInRole("Admin"))
-                                {*@
+                                    {*@
                                 <li class="nav-parent">
                                     <a>
                                         <i class="fa fa-align-left" aria-hidden="true"></i>
@@ -325,9 +326,9 @@
                             </ul>
                         </nav>
 
-                                             
 
-                        
+
+
                     </div>
 
                 </div>
@@ -336,7 +337,7 @@
             <!-- end: sidebar -->
             <section role="main" class="content-body">
                 @RenderBody()
-                </section>
+            </section>
         </div>
 
         <aside id="sidebar-right" class="sidebar-right">
@@ -446,28 +447,33 @@
     <script src="~/Scripts/jquery.vmap.world.js"></script>
     <script src="~/Scripts/jquery.vmap.africa.js"></script>
     <script src="~/Scripts/jquery.vmap.asia.js"></script>
-   
+
     <script src="~/Scripts/jquery.vmap.australia.js"></script>
-   
+
     <script src="~/Scripts/jquery.vmap.europe.js"></script>
-   
+
     <script src="~/Scripts/jquery.vmap.north-america.js"></script>
-   
+
     <script src="~/Scripts/jquery.vmap.south-america.js"></script>
     <!-- Theme Base, Components and Settings -->
-   
+
     <script src="~/Scripts/theme.js"></script>
     <!-- Theme Custom -->
-  
+
     <script src="~/Scripts/theme.custom.js"></script>
     <!-- Theme Initialization Files -->
- 
+
     <script src="~/Scripts/theme.init.js"></script>
 
     <!-- Examples -->
- 
+
     <script src="~/Scripts/examples.dashboard.js"></script>
 
-    @RenderSection("scripts",required:false)
+    <script src="~/Scripts/jquery.dataTables.js"></script>
+    <script>
+        $("#tblTarget").DataTable();
+    </script>
+
+    @RenderSection("scripts", required: false)
 </body>
 </html>

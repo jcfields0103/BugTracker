@@ -14,7 +14,8 @@
 }
 <h2>User Index</h2>
 
-<table class="table">
+<table class="table tblTarget">
+    <thead>
     <tr>
         <th>
             @Html.DisplayName("Avatar")
@@ -33,30 +34,35 @@
         </th>
         <th></th>
     </tr>
-    @foreach (var user in Model)
-    {
-<tr>
-    <td class="avatar">
-        <img src="@user.AvatarUrl" class="img-responsive" />
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => user.Email)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => user.FirstName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => user.LastName)
-    </td>
-    <td>
-        @roleHelper.ListUserRoles(user.Id).FirstOrDefault() 
-    </td>
-    <td>
-        @Html.ActionLink("Manage Role", "ManageUserRoles", "Admin", new { userId = user.Id }, null)|
-        @Html.ActionLink("Manage Projects", "ManageProjects", "Admin", new { userId = user.Id }, null)
-    </td>
-</tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+
+        {
+            <tr>
+                <td class="avatar">
+                    <img src="@user.AvatarUrl" class="img-responsive" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => user.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => user.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => user.LastName)
+                </td>
+                <td>
+                    @roleHelper.ListUserRoles(user.Id).FirstOrDefault()
+                </td>
+                <td>
+                    @Html.ActionLink("Manage Role", "ManageUserRoles", "Admin", new { userId = user.Id }, null)|
+                    @Html.ActionLink("Manage Projects", "ManageProjects", "Admin", new { userId = user.Id }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
+
 
 @Html.ActionLink("Back To Dashboard","Dashboard","Home")
