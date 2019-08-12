@@ -76,9 +76,9 @@ namespace BugTracker.Models
         [Display(Name = "LastName")]
         [MaxLength(40),MinLength(1)]
         public string LastName { get; set; }
-        [Required]        
-        [Display(Name = "DisplayName")]
-        [MaxLength(40),MinLength(1)]
+        [Required]
+        [Display(Name = "Display Name")]
+        [MaxLength(40), MinLength(1)]
         public string DisplayName { get; set; }
 
         [Required]
@@ -88,7 +88,7 @@ namespace BugTracker.Models
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
+        [Display(Name = "Confirmpassword")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }

@@ -1,6 +1,7 @@
 ﻿@{
     Layout = null;
 }
+@model BugTracker.Models.RegisterViewModel
 <!doctype html>
 <html class="fixed">
 <head>
@@ -54,34 +55,28 @@
                     {
                         @Html.AntiForgeryToken()
 
-
+                        <div class="form-group mb-lg">
+                            <label>E-mail Address</label>
+                            <input name="Email" type="email" class="form-control input-lg" />
+                        </div>
                         <div class="form-group mb-lg">
                             <label>First Name</label>
-                            <input name="firstname" type="text" class="form-control input-lg" />
+                            <input name="FirstName" type="text" class="form-control input-lg" />
                         </div>
                         <div class="form-group mb-lg">
                             <label>Last Name</label>
-                            <input name="lastname" type="text" class="form-control input-lg" />
+                            <input name="LastName" type="text" class="form-control input-lg" />
                         </div>
-                        <div class="form-group mb-lg">
-                            <label>Display Name</label>
-                            <input name="displayname" type="text" class="form-control input-lg" />
-                        </div>
-
-                        <div class="form-group mb-lg">
-                            <label>E-mail Address</label>
-                            <input name="email" type="email" class="form-control input-lg" />
-                        </div>
-
+                      
                         <div class="form-group mb-none">
                             <div class="row">
                                 <div class="col-sm-6 mb-lg">
                                     <label>Password</label>
-                                    <input name="pwd" type="password" class="form-control input-lg" />
+                                    <input name="Password" type="password" class="form-control input-lg" />
                                 </div>
                                 <div class="col-sm-6 mb-lg">
                                     <label>Password Confirmation</label>
-                                    <input name="pwd_confirm" type="password" class="form-control input-lg" />
+                                    <input name="Confirmpassword" type="password" class="form-control input-lg" />
                                 </div>
                             </div>
                         </div>

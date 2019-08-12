@@ -57,12 +57,13 @@
                 </td>
                 <td>
                     @Html.ActionLink("Manage Role", "ManageUserRoles", "Admin", new { userId = user.Id }, null)|
-                    @Html.ActionLink("Manage Projects", "ManageProjects", "Admin", new { userId = user.Id }, null)
+                    @Html.ActionLink("Manage Projects", "ManageUserProjects", "Admin", new { userId = user.Id }, null)
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
 
 
 @Html.ActionLink("Back To Dashboard","Dashboard","Home")

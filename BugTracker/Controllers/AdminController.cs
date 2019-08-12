@@ -26,7 +26,22 @@ namespace BugTracker.Controllers
                 Email = u.Email
 
             }).ToList();
+            ViewBag.RoleName= new SelectList(db.Roles.ToList(),"Name","Name");
             return View(users);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult UserIndex(string userId, string roleName)
+        {
+            foreach (var role in roleHelper.ListUserRoles(userId))
+            {
+                roleHelper.RemoveUserFromRole(userId, role);
+            }
+            if(!string.IsNullOrEmpty(roleName))
+            {
+                roleHelper.AddUserToRole(userId, roleName);
+            }
+            return RedirectToAction("UserIndex");
         }
         public ActionResult ManageUserRoles(string userId)
         {

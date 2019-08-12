@@ -180,7 +180,12 @@
     <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Controllers\TicketStatusesController.cs" />
     <Compile Include="Controllers\TicketTypesController.cs" />
+    <Compile Include="Enumerations\SystemRole.cs" />
+    <Compile Include="Helpers\DecisionHelper.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Helpers\ProjectHelper.cs" />
+    <Compile Include="Helpers\TicketHelper.cs" />
+    <Compile Include="Helpers\UserProjectsHelper.cs" />
     <Compile Include="ViewModels\UserProfileViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -244,6 +249,8 @@
     <Content Include="Img\blog-image-2.jpg" />
     <Content Include="Img\blog-image-3.jpg" />
     <Content Include="Img\device.png" />
+    <Content Include="Img\doc.png" />
+    <Content Include="Img\docx.png" />
     <Content Include="Img\favicon.ico" />
     <Content Include="Img\icon.png" />
     <Content Include="Img\invoice-logo.png" />
@@ -252,6 +259,7 @@
     <Content Include="Img\logo-default.png" />
     <Content Include="Img\logo-light.png" />
     <Content Include="Img\logo.png" />
+    <Content Include="Img\other.png" />
     <Content Include="Img\patterns\az_subtle.png" />
     <Content Include="Img\patterns\blizzard.png" />
     <Content Include="Img\patterns\bright_squares.png" />
@@ -271,6 +279,7 @@
     <Content Include="Img\patterns\textured_stripes.png" />
     <Content Include="Img\patterns\wild_oliva.png" />
     <Content Include="Img\patterns\worn_dots.png" />
+    <Content Include="Img\pdf.png" />
     <Content Include="Img\post-thumb-1.jpg" />
     <Content Include="Img\post-thumb-2.jpg" />
     <Content Include="Img\post-thumb-3.jpg" />
@@ -288,6 +297,9 @@
     <Content Include="Img\sort_desc.png" />
     <Content Include="Img\sort_desc_disabled.png" />
     <Content Include="Img\widget-twitter-profile.jpg" />
+    <Content Include="Img\xls.png" />
+    <Content Include="Img\xlsx.png" />
+    <Content Include="Img\zip.png" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap-multiselect.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -373,8 +385,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />

@@ -8,13 +8,14 @@ namespace BugTracker.Helpers
     public class ProjectHelper
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        private UserRoleHelper rolesUtility = new UserRoleHelper();
+        private UserRoleHelper roleHelper = new UserRoleHelper();
         public List<string> UsersInRoleOnProject(int projectId,string roleName)
         {
             var people = new List<string>();
+
             foreach (var user in UsersOnProject(projectId).ToList())
             {
-                if(rolesUtility.IsUserInRole(user.Id,roleName))
+                if(roleHelper.IsUserInRole(user.Id,roleName))
                 {
                     people.Add(user.Id);
                 }
@@ -63,6 +64,10 @@ namespace BugTracker.Helpers
         public ICollection<ApplicationUser>UsersNotOnProject(int projectId)
         {
             return db.Users.Where(u => u.Projects.All(p => p.Id != projectId)).ToList();
+        }
+        public ICollection<Ticket> TicketsOnProject(int projectId)
+        {
+            return db.Projects(projectId).Tickets.ToList();
         }
     }
 }
