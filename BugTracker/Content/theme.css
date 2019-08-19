@@ -1,7 +1,7 @@
 
 html,
 body {
-	background: #ecedf0;
+	background: #171717;
 	width: 100%;
 }
 
@@ -11,7 +11,7 @@ html {
 
 body {
 	color: #777;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 	line-height: 22px;
 	margin: 0;
 	font-size: 13px;
@@ -70,7 +70,7 @@ a:active {
 
 /* Layout Base - Page Header */
 .page-header {
-	background: #34495e;
+	background: #260033;
 	border-bottom: none;
 	border-left: 1px solid #3a3a3a;
 	box-shadow: 1px 3px 0 1px #cccccc;
@@ -81,7 +81,7 @@ a:active {
 
 /* Layout Base - Sidebar Left */
 .sidebar-left {
-	background: #34495e;
+	background: #260033;
 	box-shadow: -5px 0 0 #2f3139 inset;
 	color: #777777;
 	display: table-cell;
@@ -1532,7 +1532,7 @@ html.header-dark .header .input-search .input-group-btn .btn-default {
 }
 
 .sidebar-left .sidebar-header .sidebar-title {
-	color: #465162;
+	color: #ffffff;
 	padding: 15px;
 	font-size: 15px;
 	font-size: 1.5rem;
@@ -14505,7 +14505,7 @@ html.dark .multiselect-container > li > a:hover, html.dark .multiselect-containe
 	position: relative;
 }
 .form-group-invisible.focus .control-label-invisible {
-	color: #0088cc;
+	color: #000000;
 }
 .form-group-invisible .control-label-invisible {
 	bottom: 0;
@@ -16192,7 +16192,7 @@ html.dark .fc-content .fc-widget-content.fc-today {
 	position: absolute;
 	top: 50%;
 	left: 140px;
-	background-color: #ecedf0;
+	background-color: #000000;
 	border: 3px solid #cccccc;
 	color: #cccccc;
 	font-size: 28px;

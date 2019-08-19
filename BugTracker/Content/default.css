@@ -17,30 +17,30 @@ a:active,
 }
 /* Sidebar Left */
 .sidebar-left .sidebar-header .sidebar-toggle:hover i {
-	color: #0088cc;
+	color: #000000;
 }
 
 @media only screen and (min-width: 768px) {
 	html.sidebar-left-collapsed.scroll .sidebar-left .nav-main li.nav-active a:hover,
 	html.sidebar-left-collapsed.boxed .sidebar-left .nav-main li.nav-active a:hover {
-		color: #0088cc;
+		color: #000000;
 	}
 
 	html.sidebar-left-collapsed.scroll .sidebar-left .nav-main > li:hover > a span.label,
 	html.sidebar-left-collapsed.boxed .sidebar-left .nav-main > li:hover > a span.label {
-		background-color: #0088cc;
+		background-color: #000000;
 	}
 }
 /* Layout Boxed - small than min-width */
 @media only screen and (max-width: 1199px) {
 	html.boxed .header {
-		border-top-color: #0088cc;
+		border-top-color: #000000;
 	}
 }
 /* Layout Boxed - larger or equal min width */
 @media only screen and (min-width: 1200px) {
 	html.boxed .header {
-		border-top-color: #0088cc;
+		border-top-color: #000000;
 	}
 
 	html.boxed .sidebar-right {
